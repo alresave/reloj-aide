@@ -35,6 +35,7 @@ body {
   grid-template-rows: 1fr auto;
   align-items: center;
   padding: clamp(28px, 8vh, 72px) 22px calc(22px + env(safe-area-inset-bottom));
+  animation: page-enter 900ms ease-out both;
 }
 
 .message {
@@ -110,6 +111,30 @@ body {
 
 .dedication span {
   display: block;
+}
+
+.birthday-line {
+  margin-top: 0.28rem;
+  color: var(--warm);
+  font-weight: 600;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clock-page {
+    animation: none;
+  }
 }
 
 @media (min-width: 560px) {

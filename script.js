@@ -9,7 +9,7 @@ function updateClock() {
   const displayHours = hours % 12 || 12;
   const minutes = String(now.getMinutes()).padStart(2, "0");
   const seconds = String(now.getSeconds()).padStart(2, "0");
-  const period = hours >= 12 ? "PM" : "AM";
+  const period = hours >= 12 ? "p. m." : "a. m.";
 
   clockMain.textContent = `${displayHours}:${minutes}`;
   clockSeconds.textContent = seconds;
