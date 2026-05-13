@@ -14,11 +14,20 @@
     <main class="clock-page" aria-label="Reloj de cumpleaños para Aidé">
       <section class="message" aria-live="polite">
         <p class="intro">Para que nunca te falte la hora...</p>
-        <time class="clock" id="clock" datetime="">10:09 AM</time>
+        <time class="clock" id="clock" datetime="">
+          <span class="clock-main" id="clock-main">10:09</span>
+          <span class="clock-detail">
+            <span id="clock-seconds">24</span>
+            <span id="clock-period">AM</span>
+          </span>
+        </time>
         <p class="script">...y para que siempre me la puedas preguntar.</p>
       </section>
 
-      <p class="dedication">Desde aquel camión... mi tiempo tiene tu nombre. Feliz Cumpleaños, Aidé.</p>
+      <p class="dedication">
+        <span>Desde aquel camión... mi tiempo tiene tu nombre.</span>
+        <span>Feliz Cumpleaños, Aidé.</span>
+      </p>
     </main>
 
     <script src="script.js"></script>

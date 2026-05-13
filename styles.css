@@ -56,16 +56,35 @@ body {
 }
 
 .clock {
-  display: block;
+  display: flex;
   width: 100%;
+  align-items: baseline;
+  justify-content: center;
+  gap: clamp(8px, 2.4vw, 16px);
   color: var(--ink);
   font-variant-numeric: tabular-nums;
-  font-size: clamp(3.15rem, 15.5vw, 6rem);
-  font-weight: 500;
-  letter-spacing: 0;
   line-height: 0.98;
   text-wrap: nowrap;
   text-shadow: 0 12px 30px rgba(109, 143, 163, 0.13);
+}
+
+.clock-main {
+  display: block;
+  width: 100%;
+  max-width: max-content;
+  font-size: clamp(4.15rem, 21vw, 7rem);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.clock-detail {
+  display: grid;
+  gap: 3px;
+  color: rgba(23, 34, 43, 0.58);
+  font-size: clamp(1rem, 4.5vw, 1.6rem);
+  font-weight: 500;
+  line-height: 1;
+  text-align: left;
 }
 
 .script {
@@ -82,11 +101,15 @@ body {
   width: min(100%, 420px);
   justify-self: center;
   margin: 36px 0 0;
-  color: rgba(23, 34, 43, 0.68);
-  font-size: clamp(0.96rem, 4vw, 1.12rem);
-  font-weight: 400;
+  color: rgba(23, 34, 43, 0.82);
+  font-size: clamp(1.04rem, 4.35vw, 1.24rem);
+  font-weight: 500;
   line-height: 1.55;
   text-align: center;
+}
+
+.dedication span {
+  display: block;
 }
 
 @media (min-width: 560px) {
