@@ -1,0 +1,100 @@
+:root {
+  color-scheme: light;
+  --ink: #17222b;
+  --muted: #536b7b;
+  --warm: #9b5b4b;
+  --soft-blue: #e8f7ff;
+  --soft-lilac: #f7f3ff;
+  --paper: #fffdf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  font-family: "Helvetica Neue", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(155deg, var(--soft-blue) 0%, #f8fbff 48%, var(--paper) 100%);
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 50% 8%, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0) 36%),
+    linear-gradient(155deg, var(--soft-blue) 0%, #f8fbff 48%, var(--paper) 100%);
+}
+
+.clock-page {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  padding: clamp(28px, 8vh, 72px) 22px calc(22px + env(safe-area-inset-bottom));
+}
+
+.message {
+  width: min(100%, 460px);
+  justify-self: center;
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.intro {
+  max-width: 20rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1.18rem, 5vw, 1.55rem);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.clock {
+  display: block;
+  width: 100%;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(4.35rem, 22vw, 7.25rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0.98;
+  text-wrap: nowrap;
+  text-shadow: 0 12px 30px rgba(109, 143, 163, 0.13);
+}
+
+.script {
+  max-width: 21rem;
+  margin: 0;
+  color: var(--warm);
+  font-family: Caveat, "Bradley Hand", "Segoe Print", cursive;
+  font-size: clamp(1.55rem, 7vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.06;
+}
+
+.dedication {
+  width: min(100%, 420px);
+  justify-self: center;
+  margin: 36px 0 0;
+  color: rgba(23, 34, 43, 0.68);
+  font-size: clamp(0.82rem, 3.4vw, 0.96rem);
+  font-weight: 400;
+  line-height: 1.55;
+  text-align: center;
+}
+
+@media (min-width: 560px) {
+  .clock-page {
+    padding-inline: 36px;
+  }
+
+  .message {
+    gap: 24px;
+  }
+}
